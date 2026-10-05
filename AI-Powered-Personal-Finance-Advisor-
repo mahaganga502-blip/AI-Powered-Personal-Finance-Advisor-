@@ -1,0 +1,52 @@
+print("AI-Powered Personal Finance Advisor")
+print("------------------------------------")
+income = float(input("Enter your monthly income: "))
+expenses = float(input("Enter your monthly expenses: "))
+savings = income - expenses
+savings_percentage = (savings / income) * 100
+print("\nFinancial Summary")
+print("-----------------")
+print("Monthly Income :", income)
+print("Monthly Expenses:", expenses)
+print("Monthly Savings :", savings)
+print("Savings Rate    :", round(savings_percentage, 2), "%")
+print("\nAI Advice")
+print("--------")
+if savings < 0:
+    print("Warning: You are spending more than your income.")
+    print("Try reducing unnecessary expenses.")
+elif savings_percentage < 20:
+    print("Your savings are low.")
+    print("Try to save at least 20% of your monthly income.")
+elif savings_percentage < 40:
+    print("Good job! Your finances are healthy.")
+    print("Try to increase your emergency savings.")
+else:
+    print("Excellent! You have a strong savings rate.")
+    print("Consider investing some of your extra savings.")
+emergency_fund = expenses * 6
+print("\nRecommended Emergency Fund:", emergency_fund)
+print("This is approximately 6 months of your expenses.")
+
+
+OUTPUT:
+AI-Powered Personal Finance Advisor
+------------------------------------
+Enter your monthly income: 50000
+Enter your monthly expenses: 35000
+
+
+Financial Summary
+-----------------
+Monthly Income : 50000.0
+Monthly Expenses: 35000.0
+Monthly Savings : 15000.0
+Savings Rate    : 30.0 %
+
+AI Advice
+--------
+Good job! Your finances are healthy.
+Try to increase your emergency savings.
+
+Recommended Emergency Fund: 210000.0
+This is approximately 6 months of your expenses.
